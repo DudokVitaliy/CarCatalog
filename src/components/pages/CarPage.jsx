@@ -87,7 +87,7 @@ const CarPage = ({ cars, onDelete }) => {
         </Typography>
 
         <Grid container spacing={2} justifyContent="center">
-            <Grid item>
+            <Grid>
             <TextField
                 select
                 label="Виробник"
@@ -105,7 +105,7 @@ const CarPage = ({ cars, onDelete }) => {
             </TextField>
             </Grid>
 
-            <Grid item>
+            <Grid>
             <TextField
                 select
                 label="Рік"
@@ -123,7 +123,7 @@ const CarPage = ({ cars, onDelete }) => {
             </TextField>
             </Grid>
 
-            <Grid item>
+            <Grid>
             <TextField
                 select
                 label="Обʼєм (л)"
@@ -141,7 +141,7 @@ const CarPage = ({ cars, onDelete }) => {
             </TextField>
             </Grid>
 
-            <Grid item>
+            <Grid>
             <TextField
                 label="Колір"
                 value={color}
@@ -151,7 +151,7 @@ const CarPage = ({ cars, onDelete }) => {
             />
             </Grid>
 
-            <Grid item>
+            <Grid>
             <TextField
                 label="Мін. ціна"
                 type="number"
@@ -162,7 +162,7 @@ const CarPage = ({ cars, onDelete }) => {
             />
             </Grid>
 
-            <Grid item>
+            <Grid>
             <TextField
                 label="Макс. ціна"
                 type="number"
@@ -173,8 +173,8 @@ const CarPage = ({ cars, onDelete }) => {
             />
             </Grid>
 
-            <Grid item xs={12} mt={2} textAlign="center">
-            <Button onClick={resetFilters} variant="outlined" color="secondary">
+            <Grid size= {3} textAlign="center">
+            <Button onClick={resetFilters} variant="contained" color="error" sx={{ display: "flex", justifyContent: "center", alignItems: "center", mt:"7px"}} >
                 Очистити фільтри
             </Button>
             </Grid>
@@ -184,7 +184,7 @@ const CarPage = ({ cars, onDelete }) => {
 
       <Grid container spacing={4} justifyContent="center">
         {currentCars.map((car) => (
-          <Grid key={car.id} item xs={12} sm={6} md={4}>
+          <Grid key={car.id} size ={4}>
             <CarCard car={car} onEdit={handleEdit} onDelete={onDelete} />
           </Grid>
         ))}
